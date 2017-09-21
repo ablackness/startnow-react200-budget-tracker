@@ -4,11 +4,12 @@
   "description": "React/Redux Budget Tracker",
   "main": "server/index.js",
   "scripts": {
-    "build": "npm run less && webpack -w",
+    "build": "npm run less && webpack",
     "start": "node server/index.js",
     "less": "lessc src/css/style.less dist/css/style.css",
     "lint": "eslint .",
-    "test": "npm run build && mocha test/.setup.js test/*.spec.js"
+    "test": "npm run build && mocha test/.setup.js test/*.spec.js",
+    "postinstall": "npm run build"
   },
   "dependencies": {
     "axios": "^0.16.1",
